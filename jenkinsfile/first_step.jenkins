@@ -16,5 +16,10 @@ pipeline {
 				sh 'ls ../../'
 			}
 		}
+		stage("Second step") {
+			steps {
+				sh 'cat ../../nodeMonitors.xml'
+			}
+		}
 	}
 }
