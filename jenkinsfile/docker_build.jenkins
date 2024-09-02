@@ -14,7 +14,9 @@ pipeline {
         stage("create docker image") {
             steps {
                 echo " ============== start building image =================="
-                    sh "docker info"
+                dir ('docker/toolbox') {
+                    sh 'docker build -t kroky123/toolbox:latest . '
+                }
                 }
         }
     }
